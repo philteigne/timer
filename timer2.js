@@ -1,6 +1,5 @@
 const readline = require('readline');
 
-
 const setTimer = function(number) {
 
   if (number === 'b') {
@@ -9,7 +8,7 @@ const setTimer = function(number) {
 
   let timeInSeconds = parseInt(number);
 
-  if (timeInSeconds < 0 || timeInSeconds === NaN) {  //  skip any negative, or non-number entries
+  if (timeInSeconds < 0 || Number.isNaN(timeInSeconds)) {  //  skip any negative, or non-number entries
     return;
   }
 
